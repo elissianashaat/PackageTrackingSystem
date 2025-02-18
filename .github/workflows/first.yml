@@ -9,11 +9,15 @@ jobs:
         steps:
             - name: checkout repo
               uses: actions/checkout@v4
-            - name: welcome message
-              run: echo "my first github actions job"
-            
-            - name: list files
-              run: ls
-
-            - name: read file
-              run: cat README.md
+            - name: List and Read file #name field used to easily identify the step
+              run:  | #multiple commands in single step
+                    echo "my first github actions job"
+                    ls
+                    cat README.md
+            - name: generate ASCII Artwork
+              run: cowsay -f dragon "Run for cover, I am a DRAGON ... RAWR">> dragon.txt
+            #cowsay is a 3rd party library used for generating ascii artwork
+            #it's going to display a cow with a message
+            #use -f to change animal
+            #output: run for cover
+            #will save the output to dragon.txt file
