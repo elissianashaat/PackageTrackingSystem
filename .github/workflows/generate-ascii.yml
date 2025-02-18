@@ -13,6 +13,8 @@ jobs:
               run: ls -ltra
 
             - name: Executing shell script
-              run:  ./asci-generate.sh
-            
-              
+              run: |
+                chmod +x ascii-generate.sh 
+                ./asci-generate.sh
+                
+              ## add premssions 
