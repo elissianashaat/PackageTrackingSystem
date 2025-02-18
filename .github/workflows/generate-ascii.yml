@@ -13,6 +13,6 @@ jobs:
               run: ls -ltra
 
             - name: Executing shell script
-              run:  ./asci-script.sh
+              run:  ./asci-generate.sh
             
               
