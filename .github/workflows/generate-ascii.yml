@@ -15,6 +15,6 @@ jobs:
             - name: Executing shell script
               run: |
                 chmod +x ascii-generate.sh 
-                ./asci-generate.sh
+                ./ascii-generate.sh
                 
               ## add premssions 
